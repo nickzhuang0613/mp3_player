@@ -1,17 +1,19 @@
-//======================//
+.LOG
+
+//======================================================================//
 文件：常用API说明：
 作者：NICKZHUANG
 时间：2019/5/24
-//======================//
+备注：如果出现新的修补，在文末自动插入 的时间后面备注，一处修补一处说明，并用序号标明。
+          备注完毕，用多个"="隔开
+//=======================================================================//
 SetCursorPosition(unsigned int x,unsigned int y)   -->   重新定位光标，x表示光标水平坐标，y表示光标垂直坐标
 
 void HideCursor()          -->   隐藏光标
 
-ClearRec(unsigned int start_x,unsigned int end_x, unsigned int start_y,unsigned int end_y)
-  ^                                ^                      ^                             ^                           ^
-  ^                              水平起始            水平结束                   垂直开始                垂直结束
-  ^ 
-   |________清楚选的屏幕区域的内容
+ClearRec(unsigned int start_x /*水平起始*/,unsigned int end_x/*水平结束*/, \
+         unsigned int start_y/*垂直开始*/,unsigned int end_y/*垂直结束*/)  --> 清楚选定的屏幕矩形区域的内容
+
 
 CLearALL()  -->  清除屏幕所有区域
 
@@ -40,3 +42,7 @@ DelayMsBlockage（unsigned int dly） -->  毫秒级延时，会堵塞进程
 
                     
                    
+14:31 2019/5/24 ：
+     1、修改ReadMe文件
+==========================================================================
+
